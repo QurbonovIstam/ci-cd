@@ -6,6 +6,9 @@ on:
     types:
       - completed
 
+permissions:
+  contents: write   # 👈 КЛЮЧЕВО
+
 jobs:
   release:
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
